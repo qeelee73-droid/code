@@ -1,0 +1,40 @@
+size = 10
+table = [[] for _ in range(size)]
+
+while True:
+    print("\n1.Insert  2.Search  3.Delete  4.Display  5.Exit")
+    ch = int(input("Enter choice: "))
+
+    if ch == 1:
+        k = int(input("Key: "))
+        v = input("Value: ")
+        index = k % size
+        table[index].append((k, v))
+
+    elif ch == 2:
+        k = int(input("Key: "))
+        index = k % size
+        for key, val in table[index]:
+            if key == k:
+                print("Found:", val)
+                break
+        else:
+            print("Not Found")
+
+    elif ch == 3:
+        k = int(input("Key: "))
+        index = k % size
+        bucket = table[index]
+        for i, (key, val) in enumerate(bucket):
+            if key == k:
+                bucket.pop(i)
+                print("Deleted.")
+                break
+        else:
+            print("Not Found")
+
+    elif ch == 4:
+        print("Hash Table:", table)
+
+    elif ch == 5:
+        break

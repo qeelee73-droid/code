@@ -1,0 +1,40 @@
+﻿q = []
+while True:
+    print("\n--- Queue: Event Queue ---")
+    print("1. Add Event")
+    print("2. Process Event")
+    print("3. Display Pending Events")
+    print("4. Cancel Event")
+    print("5. Exit")
+
+    ch = int(input("Enter choice: "))
+
+    if ch == 1:
+        event = input("Enter event: ")
+        q.append(event)
+
+    elif ch == 2:
+        if q:
+            print("Processing:", q.pop(0))  # Remove from front (FIFO)
+        else:
+            print("No events to process!")
+
+    elif ch == 3:
+        if q:
+            print("Pending:", q)
+        else:
+            print("No pending events!")
+
+    elif ch == 4:
+        event = input("Enter event to cancel: ")
+        if event in q:
+            q.remove(event)
+            print(f"Event '{event}' canceled.")
+        else:
+            print("Event not found!")
+
+    elif ch == 5:
+        break
+
+    else:
+        print("Invalid choice!")

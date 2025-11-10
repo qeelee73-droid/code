@@ -1,0 +1,41 @@
+﻿undo_stack, redo_stack = [], []
+document = ""
+
+while True:
+    print("\n--- Stack: Undo/Redo Operations ---")
+    print("1. Make Change")
+    print("2. Undo")
+    print("3. Redo")
+    print("4. Display Document")
+    print("5. Exit")
+
+    ch = int(input("Enter choice: "))
+
+    if ch == 1:
+        change = input("Enter change: ")
+        undo_stack.append(document)
+        document += change
+        redo_stack.clear()
+
+    elif ch == 2:
+        if undo_stack:
+            redo_stack.append(document)
+            document = undo_stack.pop()
+        else:
+            print("Nothing to undo!")
+
+    elif ch == 3:
+        if redo_stack:
+            undo_stack.append(document)
+            document = redo_stack.pop()
+        else:
+            print("Nothing to redo!")
+
+    elif ch == 4:
+        print("Document:", document)
+
+    elif ch == 5:
+        break
+
+    else:
+        print("Invalid choice!")

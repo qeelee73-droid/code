@@ -1,0 +1,89 @@
+size = 10
+table = [None] * size
+
+def hash_func(key):
+    return key % size
+
+while True:
+    print("1. Insert\n2. Search\n3. Delete\n4. Display\n5. Exit")
+    ch = int(input("Enter choice: "))
+
+    if ch == 1:
+        k = int(input("Key: "))
+        v = input("Value: ")
+        idx = hash_func(k)
+        while table[idx] is not None:
+            idx = (idx + 1) % sizesize = 10
+table = [None] * size
+
+while True:
+    print("\n1.Insert  2.Search  3.Delete  4.Display  5.Exit")
+    ch = int(input("Enter choice: "))
+
+    if ch == 1:
+        k = int(input("Key: "))
+        v = input("Value: ")
+        idx = k % size
+        while table[idx] is not None:
+            idx = (idx + 1) % size
+        table[idx] = (k, v)
+        print("Inserted.")
+
+    elif ch == 2:
+        k = int(input("Key: "))
+        idx = k % size
+        for _ in range(size):
+            if table[idx] and table[idx][0] == k:
+                print("Found:", table[idx][1])
+                break
+            idx = (idx + 1) % size
+        else:
+            print("Not Found")
+
+    elif ch == 3:
+        k = int(input("Key: "))
+        idx = k % size
+        for _ in range(size):
+            if table[idx] and table[idx][0] == k:
+                table[idx] = None
+                print("Deleted.")
+                break
+            idx = (idx + 1) % size
+        else:
+            print("Not Found")
+
+    elif ch == 4:
+        print("Hash Table:", table)
+
+    elif ch == 5:
+        break
+        table[idx] = (k, v)
+
+    elif ch == 2:
+        k = int(input("Key: "))
+        idx = hash_func(k)
+        for _ in range(size):
+            if table[idx] and table[idx][0] == k:
+                print("Found:", table[idx][1])
+                break
+            idx = (idx + 1) % size
+        else:
+            print("Not Found")
+
+    elif ch == 3:
+        k = int(input("Key: "))
+        idx = hash_func(k)
+        for _ in range(size):
+            if table[idx] and table[idx][0] == k:
+                table[idx] = None
+                print("Deleted")
+                break
+            idx = (idx + 1) % size
+        else:
+            print("Key not found")
+
+    elif ch == 4:
+        print(table)
+
+    elif ch == 5:
+        break
