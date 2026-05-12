@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PHP Array Example</title>
+</head>
+<body>
+
+    <h2>Array Elements</h2>
+
+    <?php
+
+        $colors = array("Red", "Green", "Blue", "Yellow");
+
+        echo "Stored Values in Array:<br><br>";
+
+        foreach($colors as $value) {
+
+            echo $value . "<br>";
+        }
+
+    ?>
+
+</body>
+</html>

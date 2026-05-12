@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Calculator</title>
+
+    <script>
+        // Function to perform calculation
+        function calculate() {
+
+            // Get values from input fields and convert to numbers
+            var num1 = parseFloat(document.getElementById("num1").value);
+            var num2 = parseFloat(document.getElementById("num2").value);
+
+            // Get selected operation (+, -, *, /)
+            var operation = document.getElementById("operation").value;
+
+            var result;
+
+            // Use switch-case to perform operation
+            switch(operation) {
+
+                case "+":
+                    result = num1 + num2;
+                    break;
+
+                case "-":
+                    result = num1 - num2;
+                    break;
+
+                case "*":
+                    result = num1 * num2;
+                    break;
+
+                case "/":
+                    // Check division by zero
+                    if (num2 == 0) {
+                        result = "Cannot divide by zero";
+                    } else {
+                        result = num1 / num2;
+                    }
+                    break;
+
+                default:
+                    result = "Invalid operation";
+            }
+
+            // Display result in paragraph
+            document.getElementById("result").innerHTML = "Result: " + result;
+        }
+    </script>
+</head>
+<body>
+
+    <h2>Simple Calculator</h2>
+
+    <!-- Input fields -->
+    Number 1: <input type="text" id="num1"><br><br>
+    Number 2: <input type="text" id="num2"><br><br>
+
+    <!-- Operation selection -->
+    Operation:
+    <select id="operation">
+        <option value="+">Addition (+)</option>
+        <option value="-">Subtraction (-)</option>
+        <option value="*">Multiplication (*)</option>
+        <option value="/">Division (/)</option>
+    </select>
+    <br><br>
+
+    <!-- Button to calculate -->
+    <button onclick="calculate()">Calculate</button>
+
+    <!-- Result display -->
+    <p id="result"></p>
+
+</body>
+</html>

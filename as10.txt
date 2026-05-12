@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>POST Method Example</title>
+</head>
+<body>
+
+    <h2>Student Form</h2>
+
+    <form method="POST">
+
+        Name:
+        <input type="text" name="name">
+        <br><br>
+
+        Age:
+        <input type="text" name="age">
+        <br><br>
+
+        <input type="submit" value="Submit">
+
+    </form>
+
+    <?php
+
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+            $name = $_POST['name'];
+            $age = $_POST['age'];
+
+            echo "<h3>Entered Details:</h3>";
+
+            echo "Name: " . $name . "<br>";
+
+            echo "Age: " . $age;
+        }
+
+    ?>
+
+</body>
+</html>

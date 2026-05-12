@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Page with Image, Link and Nested Table</title>
+</head>
+<body>
+
+    <h1 align="center">My Web Page</h1>
+
+    
+    <h2 align="center">My Image</h2>
+    <p align="center">
+    <img src="https://picsum.photos/200" alt="Sample Image" width="150" height="150">
+    </p>
+    
+    <h2 align="center">Visit Website</h2>
+    <p align="center">
+        <a href="https://www.google.com">Click here to open Google</a>
+    </p>
+
+    
+    <h2 align="center">Nested Table Example</h2>
+    
+    <table border="1" cellpadding="10" align="center">
+        <tr>
+            <th>Main Table</th>
+            <th>Nested Table</th>
+        </tr>
+
+        <tr>
+            <td>Row 1 Data</td>
+            <td>
+                <!-- Nested Table -->
+                <table border="1" cellpadding="5">
+                    <tr>
+                        <th>Sub Col 1</th>
+                        <th>Sub Col 2</th>
+                    </tr>
+                    <tr>
+                        <td>Data A</td>
+                        <td>Data B</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+    </table>
+
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome Page</title>
+</head>
+<body>
+
+    <h2>
+        <?php
+            echo "Welcome";
+        ?>
+    </h2>
+
+    <h3>
+        Current Date and Time:
+    </h3>
+
+    <?php
+        date_default_timezone_set("Asia/Kolkata");
+
+        echo date("d-m-Y h:i:s A");
+    ?>
+
+</body>
+</html>

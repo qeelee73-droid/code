@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Personal Details</title>
+</head>
+<body>
+
+    <h1 align="center">Personal Details</h1>
+
+    <p><b>Name:</b> SR K</p>
+    <p><i>Course:</i> Computer Engineering</p>
+    <p><u>College:</u> Your College Name</p>
+
+    <p><b>Address:</b> <br>
+       Pimpri-Chinchwad, Maharashtra
+    </p>
+
+    <p><b>Hobbies:</b></p>
+    <p>
+        <i>Playing Games</i><br>
+        <i>Learning Cybersecurity</i><br>
+        <i>Watching Tech Videos</i>
+    </p>
+
+    <p><b>Contact:</b> <br>
+        Email: <u>example@gmail.com</u>
+    </p>
+
+</body>
+</html>
